@@ -1,0 +1,217 @@
+#personal portfolio website
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #007BFF, #00CFFD);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #007BFF;
+            padding: 10px 0;
+            transition: background 0.3s;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+            padding-top: 70px; /* Space for fixed nav */
+        }
+        .profile-img {
+            width: 150px;
+            border-radius: 50%;
+            border: 5px solid #007BFF;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .about {
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .skills, .projects {
+            margin: 20px 0;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .skill {
+            margin: 10px 0;
+        }
+        .progress {
+            background: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 20px;
+        }
+        .progress-bar {
+            background: #007BFF;
+            height: 100%;
+            width: 0;
+            transition: width 1s;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #007BFF;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            .about {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .about img {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+    </ul>
+</nav>
+
+<header id="home">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Web Developer | Designer | Problem Solver</p>
+</header>
+
+<div class="container">
+    <section class="home">
+        <h2>Hi, I'm [Your Name]</h2>
+        <img src="your-photo-url.jpg" alt="Your Photo" class="profile-img">
+        <p>I am a passionate web developer focused on creating engaging and user-friendly websites. My skills include HTML, CSS, JavaScript, and React. I love collaborating with clients to bring their visions to life.</p>
+    </section>
+
+    <section class="about" id="about">
+        <img src="your-photo-url.jpg" alt="Your Photo" class="profile-img">
+        <div>
+            <h2>About Me</h2>
+            <p>I have a background in computer science and a strong foundation in web technologies. I graduated from [Your University] with a degree in [Your Degree]. Over the past [X] years, I have worked on various projects ranging from small business websites to large-scale applications.</p>
+            <h3>Education</h3>
+            <p>[Your Degree], [Your University], [Year]</p>
+            <h3>Professional Experience</h3>
+            <p>[Your Job Title] at [Your Company] - [Year] to Present</p>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+        <div class="skill">
+            <strong>HTML & CSS</strong>
+            <div class="progress">
+                <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <strong>JavaScript & React</strong>
+            <div class="progress">
+                <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <strong>Responsive Design</strong>
+            <div class="progress">
+                <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <strong>Version Control (Git)</strong>
+            <div class="progress">
+                <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <strong>API Integration</strong>
+            <div class="progress">
+                <div class="progress-bar" style="width: 70%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="[Project URL]">Project 1</a> - A brief description of the project.</li>
+            <li><a href="[Project URL]">Project 2</a> - A brief description of the project.</li>
+            <li><a href="[Project URL]">Project 3</a> - A brief description of the project.</li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; [Your Name] | [Your Email] | [Your LinkedIn URL]</p>
+</footer>
+
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
+</body>
+</html>
